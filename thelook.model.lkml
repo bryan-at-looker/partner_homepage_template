@@ -1,4 +1,4 @@
-connection: "snowlooker2"
+connection: "snowlooker"
 label: "1) eCommerce with Event Data"
 
 
