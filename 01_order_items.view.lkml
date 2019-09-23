@@ -8,6 +8,8 @@ view: order_items {
     sql: ${TABLE}.id ;;
   }
 
+  dimension: bad_sql_error {}
+
   dimension: inventory_item_id {
     type: number
     hidden: yes

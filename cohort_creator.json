@@ -1,0 +1,24 @@
+{
+  "default_explore": "thelook::order_items",
+  "cohort_schema": "LOOKER_SCRATCH",
+  "explores": {
+    "thelook::order_items": {
+      "default_fields": ["users.count","order_items.count"],
+      "default_filters": {"order_items.created_date":"7 days"},
+      "cohort_dimension": "cohort_user.user_id",
+      "cohort_join_dimension": "order_items.user_id"
+    },
+    "thelook::sessions": {
+      "default_fields": ["users.count","events.sessions_count"],
+      "default_filters": {"events.event_date":"7 days"},
+      "cohort_join_dimension": "events.user_id",
+      "cohort_dimension": "cohort_user.user_id"
+    },
+    "crazy_examples::order_items": {
+      "default_fields": ["order_items.count"],
+      "default_filters": {"order_items.created_date":"7 days"},
+      "cohort_dimension": "cohort_user.user_id",
+      "cohort_join_dimension": "order_items.user_id"
+    }
+  }
+}
